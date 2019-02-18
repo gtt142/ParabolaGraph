@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Parabola</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
+</head>
+<body>
+    <div id='inputField'>
+        <input type="checkbox" id='autoY'>Автоподбор yMin и yMax (нужно ввести deltaY)  |
+        deltaY = <input type='text' id='deltaY' value='10' size=7>
+        <p> </p>
+        <div>
+            leftX = <input type='text' id='leftX' value='-5' size=7>
+            rigthX = <input type='text' id='rightX' value='5' size=7>
+            yMin = <input type='text' id='yMin' value='-5' size=7>
+            yMax = <input type='text' id='yMax' value='5' size=7>
+        </div>
+        <hr>
+        <h3 align=center>y = a<sup>2</sup>x + bx + c</h3>
+        <div style='text-align: center'>
+            f(x) = <input id='A' value='1' size=1>x<sup>2</sup>
+            + <input id='B' value='0' size=1>x
+            + <input id='C' value='0' size=1>
+        </div>
+    </div>
+
+    <input id='canvasScale' type="range" min="0.1" max="2.5" step="0.1" value="1">
+    сетка по X = <input type='text' id='xGrids' value='10' size=7>
+    сетка по Y = <input type='text' id='yGrids' value='10' size=7>
+    <div style='text-align: center'>
+        <canvas id='canvas' style='width: 500px;'></canvas>
+    </div>
+    </body>
+<script src="draw.js"></script>
+</html>
