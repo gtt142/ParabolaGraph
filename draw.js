@@ -103,6 +103,27 @@ function drawAxis() {
     }
     ctx.stroke();
     ctx.restore();
+
+    if (leftX < 0 && rightX > 0) {
+        let xZero = (canvasW - 2*canvasBorder) * (-1*leftX)/(rightX-leftX) + canvasBorder;
+        ctx.save();
+        ctx.strokeStyle = 'black';
+        ctx.beginPath();
+        ctx.moveTo(xZero, canvasBorder);
+        ctx.lineTo(xZero, canvasH-canvasBorder);            
+        ctx.stroke();
+        ctx.restore();
+    }
+    if (yMin < 0 && yMax > 0) {
+        let yZero = (canvasH - 2*canvasBorder) * (yMax)/(yMax-yMin) + canvasBorder;
+        ctx.save();
+        ctx.strokeStyle = 'black';
+        ctx.beginPath();
+        ctx.moveTo(canvasBorder, yZero);
+        ctx.lineTo(canvasW-canvasBorder, yZero);            
+        ctx.stroke();
+        ctx.restore();
+    }
 }
 
 
